@@ -1,0 +1,35 @@
+---
+import "../styles/styles.scss";
+import Header from "../layouts/header.astro";
+import Footer from "../layouts/footer.astro";
+import { useSanityClient } from "astro-sanity";
+const posts = await useSanityClient().fetch(`*[_type == "post"]`);
+---
+
+<style lang="styl"></style>
+
+<Header title="Blog Posts" />
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<title>My blog</title>
+
+<body>
+	<main>
+		<h1>My blog</h1>
+		{
+			posts && (
+				<ul>
+					{posts.map((post) => (
+						<li>
+							<a href={`../post/${post.slug?.current}`}>
+								{post.title}
+							</a>
+						</li>
+					))}
+				</ul>
+			)
+		}
+	</main>
+</body>
+<Footer />

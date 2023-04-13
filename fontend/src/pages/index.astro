@@ -1,0 +1,194 @@
+---
+import "../styles/styles.scss";
+
+import Header from "../layouts/header.astro";
+import Footer from "../layouts/footer.astro";
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import MyComponent from "../components/MyComponent.astro";
+---
+
+<style lang="styl"></style>
+
+<Header title="Tiki Raiders" />
+<body>
+	<main>
+		<section class="aboutus">
+			<h3>Our Story</h3>
+			<p>
+				<img
+					class="CoupleImage"
+					src="/assest/JimmyKim_Bryce.jpg"
+					alt="Jimmy and Kim at Bryce national Park"
+				/>
+				Welcome! We are the TikiRaiders; TikiKiki, TikiJimi, and Hershey
+				our chocolate lab/dachshund mix pup. <br /><br />
+			</p>
+
+			<p>
+				<img class="RvImage" src="/assest/RV.jpg" alt="Our RV" />
+				We live in our RV full time and are traveling the country to see
+				everything we can! We left our home behind in beautiful Southern
+				California, and are on the hunt for all things Tiki, Adventure, and
+				Fun!
+				<br /><br />
+			</p>
+
+			<p>
+				While my love of Tiki began after my first visit to Hawaii when
+				I was 5, my husband’s love came from my sharing tiki with him
+				(our third date was to Tiki-Ti). Our love story even included a
+				luau wedding and tropical honeymoon.
+				<br /><br />
+			</p>
+			<p>
+				But traveling just during vacations was not enough. I have a
+				hereditary disease <a
+					href="https://www.ehlers-danlos.com/what-is-eds/"
+					target="_blank"
+					rel="noopener noreferrer">Ehlers’s Danlos Syndrome</a
+				> (and a few others), which breaks down my joints overtime and will
+				severely limit my mobility later in life, so we decided there is
+				no time like the present to see the world.<img
+					class="KimandDog"
+					src="/assest/Kimanddog.png"
+					alt="Kim and Dog"
+				/><br /><br />
+			</p>
+			<p>
+				We became digital nomads with the goal of moving slowly across
+				the US, and maybe beyond, spending our weekends exploring. We
+				might find our dream home location along the way, but we plan to
+				be traveling for the next several years in order to see
+				everything.
+				<img
+					class="CarImage"
+					src="/assest/Bronco_edit.png"
+					alt="Our Bronco"
+				/><br /><br />
+			</p>
+			<p>
+				Our goals include seeing every Tiki bar, National Park, and
+				State we can. If you have something special in your town, or a
+				home tiki bar we can visit, let us know in the comments!<br
+				/><br />
+			</p>
+			<p>
+				We love all things Tiki of course, but we also love Disney, the
+				outdoors, and history. We are using our love of adventure to
+				raid these places and bring our collection of treasures back to
+				our future hideaway. We look forward to sharing our journey with
+				you!<br /><br />
+			</p>
+			<p>
+				Check out our itineraries by location, check off lists, other
+				blog posts, and TikTok videos.
+			</p>
+		</section>
+		<!-- <div class="blogs">
+			<div class="newBlog post">
+				<h3>Newest Blog</h3>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea
+					qui corrupti neque minima necessitatibus voluptas quod
+					reiciendis harum, quasi sunt omnis eos rerum dolores iste
+					magnam? Sint asperiores sunt suscipit! <a href="">
+						Continue Reading</a>
+				</p>
+			</div>
+			<div class="topBlog post">
+				<h3>Most Read Blog</h3>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea
+					qui corrupti neque minima necessitatibus voluptas quod
+					reiciendis harum, quasi sunt omnis eos rerum dolores iste
+					magnam? Sint asperiores sunt suscipit! <a href="">
+						Continue Reading</a>
+				</p>
+			</div>
+		</div>
+		<div class="videos">
+			<div class="newVideo post">
+				<h3>Newest Video</h3>
+				<blockquote
+					class="tiktok-embed"
+					cite="https://www.tiktok.com/@tikiraiders/video/7110466722288799022"
+					data-video-id="7110466722288799022"
+					style="max-width: 650px;min-width: 325px;"
+				>
+					<section>
+						<a
+							target="_blank"
+							title="@tikiraiders"
+							href="https://www.tiktok.com/@tikiraiders?refer=embed"
+							>@tikiraiders</a
+						> Ice Skating Fun! #<a
+							title="familyreunion"
+							target="_blank"
+							href="https://www.tiktok.com/tag/familyreunion?refer=embed"
+							>familyreunion
+						</a>#i<a
+							title="iceskating"
+							target="_blank"
+							href="https://www.tiktok.com/tag/iceskating?refer=embed"
+							>ceskating #</a
+						>ti<a
+							title="tikiraiders"
+							target="_blank"
+							href="https://www.tiktok.com/tag/tikiraiders?refer=embed"
+							>kiraiders</a
+						>
+						<a
+							target="_blank"
+							title="♬ original sound - Tikiraiders"
+							href="https://www.tiktok.com/music/original-sound-7110466626570455851?refer=embed"
+							>♬ original sound - Tikiraiders</a
+						>
+					</section>
+				</blockquote>
+				<script async src="https://www.tiktok.com/embed.js"></script>
+			</div>
+			<div class="topVideo post">
+				<h3>Most Watched Video</h3>
+				<blockquote
+					class="tiktok-embed"
+					cite="https://www.tiktok.com/@tikiraiders/video/7110026863229193518"
+					data-video-id="7110026863229193518"
+					style="max-width: 605px;min-width: 325px;"
+				>
+					<section>
+						<a
+							target="_blank"
+							title="@tikiraiders"
+							href="https://www.tiktok.com/@tikiraiders?refer=embed"
+							>@tikiraiders</a
+						> Are Throwing Fun! #<a
+							title="axethrowing"
+							target="_blank"
+							href="https://www.tiktok.com/tag/axethrowing?refer=embed"
+							>axethrowing
+						</a>#<a
+							title="familyreunion"
+							target="_blank"
+							href="https://www.tiktok.com/tag/familyreunion?refer=embed"
+							>familyreunion
+						</a>#<a
+							title="tikiraiders"
+							target="_blank"
+							href="https://www.tiktok.com/tag/tikiraiders?refer=embed"
+							>tikiraiders</a
+						>
+						<a
+							target="_blank"
+							title="♬ original sound - Tikiraiders"
+							href="https://www.tiktok.com/music/original-sound-7110026832581315370?refer=embed"
+							>♬ original sound - Tikiraiders</a
+						>
+					</section>
+				</blockquote>
+				<script async src="https://www.tiktok.com/embed.js"></script>
+			</div> -->
+		<!-- </div> -->
+	</main>
+	<Footer />
+</body>

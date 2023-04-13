@@ -1,0 +1,60 @@
+---
+export interface Props {
+    title: string;
+}
+// TODO: figure out why tailwind broke everything
+
+const { title } = Astro.props;
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); //remove the first "/"
+---
+<head>
+    <meta charset="UTF-8" />
+    <title>Tiki Raiders</title>
+    <link rel="icon" type="image/x-icon" href="/favicon1.ico">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    
+    <script src="../scripts/local.js"></script>
+</head>
+
+<header class="container">
+    <banner id="banner">
+        <img class="banner_large" src="/assest/MainPhotoNew_2_large.png" />
+        <img class="banner_medium" src="/assest/MainPhotoNew_3_mid.png" />
+        <img class="banner_small" src="/assest/MainPhotoNew_3_min.png" />
+        <div id="menu">
+            <button id="menu-bar">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </button>
+            <nav class="nav" id="nav">
+                <ul>
+                    <li class={currentPath === "" ? "active" : ""}>
+                        <a href="/">Home</a>
+                    </li>
+                    <li class={currentPath === "blog" ? "active" : ""}>
+                        <a href="/blog/">Blog</a>
+                    </li>
+                    <li class={currentPath === "itineraries" ? "active" : ""}>
+                        <a href="/itineraries/">Itineraries</a>
+                    </li>
+                    <li class={currentPath === "videos" ? "active" : ""}>
+                        <a href="/videos/">Videos</a>
+                    </li>
+                    <li class={currentPath === "patreon" ? "active" : ""}>
+                        <a
+                            href="https://www.patreon.com/user?u=85278623"
+                            target="_blank">Patreon</a>
+                    </li>
+                    <li class={currentPath === "contact" ? "active" : ""}>
+                        <a href="/contact/">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu-bg" id="menu-bg"></div>
+    </banner>
+</header>
