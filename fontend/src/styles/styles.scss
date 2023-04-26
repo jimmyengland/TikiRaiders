@@ -8,45 +8,138 @@
 
 body {
     font-family: Arial;
-    // padding: 20px;
     background: #f1f1f1;
 }
 
-main {
-    padding: 20px;
-}
-
-
 // Footer
 footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
     position: relative;
     width: 100%;
     min-height: 200px;
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: center;
-    columns: 3;
     background-color: orange;
 
 
     .follow {
+        grid-column: 2;
         margin: 40px 40px;
+        
 
         h4 {
             text-align: center;
+            font-size: 1.5em;
             padding-bottom: 10px;
         }
 
         .socicon {
             padding-left: .5em;
-            height: 30px;
+            height: 60px;
         }
+    }
+
+    .contact{
+        font-size: 2em;
+        margin: 60px 60px;
+        text-align: center;
     }
 }
 
+
+// contact page
+.form{
+    // display: block;
+    text-align: center;
+    max-width: 75%;
+    margin-left: 15%;
+}
+
+#fs-frm{
+    // display: inline-block;
+    // text-align: left;
+    
+}
+
+#fs-frm input,
+#fs-frm select,
+#fs-frm textarea,
+#fs-frm fieldset,
+#fs-frm optgroup,
+#fs-frm label,
+#fs-frm #card-element:disabled {
+  font-family: inherit;
+  font-size: 100%;
+  color: inherit;
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+}
+#fs-frm label,
+#fs-frm legend,
+#fs-frm ::placeholder {
+  font-size: .825rem;
+  margin-bottom: .5rem;
+  padding-top: .2rem;
+  display: flex;
+  align-items: baseline;
+}
+
+/* border, padding, margin, width */
+#fs-frm input,
+#fs-frm select,
+#fs-frm textarea,
+#fs-frm #card-element {
+  border: 1px solid rgba(0,0,0,0.2);
+  background-color: rgba(255,255,255,0.9);
+  padding: .75em 1rem;
+  margin-bottom: 1.5rem;
+}
+#fs-frm input:focus,
+#fs-frm select:focus,
+#fs-frm textarea:focus {
+  background-color: white;
+  outline-style: solid;
+  outline-width: thin;
+  outline-color: gray;
+  outline-offset: -1px;
+}
+#fs-frm [type="text"],
+#fs-frm [type="email"] {
+  width: 100%;
+}
+#fs-frm [type="button"],
+#fs-frm [type="submit"],
+#fs-frm [type="reset"] {
+  width: auto;
+  cursor: pointer;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+#fs-frm [type="button"]:focus,
+#fs-frm [type="submit"]:focus,
+#fs-frm [type="reset"]:focus {
+  outline: none;
+}
+#fs-frm [type="submit"],
+#fs-frm [type="reset"] {
+  margin-bottom: 0;
+}
+
+
+
+
+
+
 // main page
 main {
-    height: auto;
+    padding: 20px;
+    padding-bottom: 200px;
+    height: 100%;
 
 
     .aboutus {
@@ -82,23 +175,24 @@ main {
         }
     }
 
-
-
     h3 {
         text-align: center;
         padding: 15px;
+
+        
     }
 
-    .blogs {
-        display: flex;
-        text-align: center;
-        padding: 30px;
+    .blogInfo {
 
-        .post {
-            border-style: solid;
-            padding: 10px;
+        ul{
+            width: 100px;
+            border: 10px black;
+            padding: 20px;
+            margin: 20px;
         }
-
+        img{
+            max-width: 100px;
+        }
     }
 
     .videos {
@@ -125,10 +219,39 @@ body {
     margin: 0;
 }
 
-main {
-    padding-bottom: 200px;
-    height: 100%;
+.blogPage{
+
+    align-self: center;
+
+    h1{
+        text-align: center;
+        font-size: 4em;
+    }
+
+    ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 50%;
+        align-items: center;
+        width: 500px;
+        list-style-type: none;
+        padding: 20px;
+        text-align: center;
+        font-size: 2em;
+    }
+
+
+    a{
+        text-decoration: none;
+
+
+    }
+    img{
+        max-width: 300px;
+    }
 }
+
+
 
 @media (max-width:798px) {
 

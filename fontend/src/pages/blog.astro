@@ -3,7 +3,16 @@ import "../styles/styles.scss";
 import Header from "../layouts/header.astro";
 import Footer from "../layouts/footer.astro";
 import { useSanityClient } from "astro-sanity";
-const posts = await useSanityClient().fetch(`*[_type == "post"]`);
+const posts = await useSanityClient().fetch(`*[_type == "post"]{
+	title,
+	slug,
+	mainImage{
+		asset->{
+			_id,
+			url
+		}
+	}
+}`);
 ---
 
 <style lang="styl"></style>
@@ -16,20 +25,25 @@ const posts = await useSanityClient().fetch(`*[_type == "post"]`);
 
 <body>
 	<main>
-		<h1>My blog</h1>
-		{
-			posts && (
-				<ul>
-					{posts.map((post) => (
-						<li>
-							<a href={`../post/${post.slug?.current}`}>
-								{post.title}
-							</a>
-						</li>
-					))}
-				</ul>
-			)
-		}
+		<section class="blogPage">
+			<h1>Our Travels</h1>
+			{
+				posts && (
+					<ul>
+						{posts.map((post) => (
+							<li>
+								<div>
+									<a href={`../post/${post.slug?.current}`}>
+										{post.title}
+										<img src={post.mainImage.asset.url }alt="">{}
+									</a>
+								</div>
+							</li>
+						))}
+					</ul>
+				)
+			}
+		</section>
 	</main>
 </body>
 <Footer />

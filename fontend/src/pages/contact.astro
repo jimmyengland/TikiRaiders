@@ -1,23 +1,56 @@
 ---
-import '../styles/styles.scss';
+import "../styles/styles.scss";
 
-
-import Header from '../layouts/header.astro';
-import Footer from '../layouts/footer.astro';
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import MyComponent from '../components/MyComponent.astro';
+import Header from "../layouts/header.astro";
+import Footer from "../layouts/footer.astro";
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import MyComponent from "../components/MyComponent.astro";
 ---
 
-
 <style lang="styl"></style>
-<Header title="Welcome to Astro."></Header>
-	<main>
-		
-		
-	</main>
+<Header title="Contact Us." />
+<main class = "form">
+	<form
+		id="fs-frm"
+		name="simple-contact-form"
+		accept-charset="utf-8"
+		action="https://formspree.io/f/xzbqykja"
+		method="post"
+	>
+		<fieldset id="fs-frm-inputs">
+			<label for="full-name">Full Name</label>
+			<input
+				type="text"
+				name="name"
+				id="full-name"
+				placeholder="First and Last"
+				required=""
+			/>
+			<label for="email-address">Email Address</label>
+			<input
+				type="email"
+				name="_replyto"
+				id="email-address"
+				placeholder="email@domain.tld"
+				required=""
+			/>
+			<label for="message">Message</label>
+			<textarea
+				rows="5"
+				name="message"
+				id="message"
+				placeholder="Message Here"
+				required=""></textarea>
+			<input
+				type="hidden"
+				name="_subject"
+				id="email-subject"
+				value="Contact Form Submission"
+			/>
+		</fieldset>
+		<input type="submit" value="Submit" />
+	</form>
+</main>
 
-
-<Footer></Footer>
-
-
+<Footer />
