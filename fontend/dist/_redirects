@@ -1,0 +1,6 @@
+/               /.netlify/functions/entry    200
+/itineraries    /.netlify/functions/entry    200
+/contact        /.netlify/functions/entry    200
+/videos         /.netlify/functions/entry    200
+/blog           /.netlify/functions/entry    200
+/post/:slug     /.netlify/functions/entry    200
