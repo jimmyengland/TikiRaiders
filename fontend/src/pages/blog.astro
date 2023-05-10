@@ -29,7 +29,7 @@ const posts = await useSanityClient().fetch(`*[_type == "post"]{
 			<h1>Our Travels</h1>
 			{
 				posts && (
-					<ul>
+					<ol>
 						{posts.map((post) => (
 							<li>
 								<div>
@@ -40,7 +40,7 @@ const posts = await useSanityClient().fetch(`*[_type == "post"]{
 								</div>
 							</li>
 						))}
-					</ul>
+					</ol>
 				)
 			}
 		</section>
