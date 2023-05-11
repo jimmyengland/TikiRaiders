@@ -2,7 +2,6 @@
 
 import { defineConfig } from 'astro/config';
 import sanity from "astro-sanity";
-import tailwind from "@astrojs/tailwind";
 
 import netlify from "@astrojs/netlify/functions";
 
