@@ -221,68 +221,90 @@ body {
     margin: 0;
 }
 
-.blogPage {
-
-    display: block;
-
-
-    h1 {
-        text-align: center;
-        font-size: 4em;
+.blogbody, html {
+    height: 100%;
+    
+    .blogPage{
+        padding: 5px;
     }
-
-    ol {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        // width: 100%;
+    .bgimg{
+        background-image: url('/assest/Hiking_SanDiego.jpg');
         height: 100%;
-        padding-left: 0;
-        min-width: 0;
-        // display: grid;
-        // grid-template-columns: 1fr 1fr 1fr;
-        // column-gap: 50%;
-        // margin-left: 12%;
-        row-gap: 300px;
-        
-
-        list-style-type: none;
-        text-align: center;
-        // font-size: 2em;
-
-        li {
-            list-style: none;
-            display: inline-block;
-            width: calc(100% / 3);
-            height: 120px;
-            margin-top: auto;
-            margin-bottom: auto;
-            text-align: center;
-
-            :nth-child(even) {
-                background-color: yellow;
-            }
-
-            a {
-                width: 200px;
-                align-items: center;
-            }
-        }
+        background-position: center;
+        background-size: cover;
+        position: relative;
     }
-
-
-
-
-    a {
-        text-decoration: none;
-
-
-    }
-
-    img {
-        max-width: 300px;
+    h1 {
+        // text-align: center;
+        font-size: 4em;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
+
+// .blogPage {
+//     display: block;
+
+    // h1 {
+    //     text-align: center;
+    //     font-size: 4em;
+    // }
+
+//     ol {
+//         display: flex;
+//         flex-direction: row;
+//         flex-wrap: wrap;
+//         // width: 100%;
+//         height: 100%;
+//         padding-left: 0;
+//         min-width: 0;
+//         // display: grid;
+//         // grid-template-columns: 1fr 1fr 1fr;
+//         // column-gap: 50%;
+//         // margin-left: 12%;
+//         row-gap: 300px;
+
+
+//         list-style-type: none;
+//         text-align: center;
+//         // font-size: 2em;
+
+//         li {
+//             list-style: none;
+//             display: inline-block;
+//             width: calc(100% / 3);
+//             height: 120px;
+//             margin-top: auto;
+//             margin-bottom: auto;
+//             text-align: center;
+
+//             :nth-child(even) {
+//                 background-color: yellow;
+//             }
+
+//             a {
+//                 width: 200px;
+//                 align-items: center;
+//             }
+//         }
+//     }
+
+
+
+
+//     a {
+//         text-decoration: none;
+
+
+//     }
+
+//     img {
+//         max-width: 300px;
+//     }
+// }
 
 
 

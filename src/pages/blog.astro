@@ -23,13 +23,19 @@ const posts = await useSanityClient().fetch(`*[_type == "post"]{
 <meta name="viewport" content="width=device-width" />
 <title>My blog</title>
 
-<body>
-	<main>
-		<section class="blogPage">
+<body class = "blogbody">
+	<main class="blogPage">
+		<div class="bgimg">
+			<h1>COMING SOON</h1>
+		</div>
+
+		
+
+		<!-- <section class="blogPage">
+
 			<h1>Our Travels</h1>
 			{
 				posts && (
-					<ol>
 						{posts.map((post) => (
 							<li>
 								<div>
@@ -43,7 +49,7 @@ const posts = await useSanityClient().fetch(`*[_type == "post"]{
 					</ol>
 				)
 			}
-		</section>
+		</section> -->
 	</main>
 </body>
 <Footer />
